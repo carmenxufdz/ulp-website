@@ -101,7 +101,7 @@ const menuitems = [
                                 : 'lg:ml-7 lg:px-0'
                             } lg:inline-flex lg:py-6 ${
                               Astro.url.pathname === '/'
-                                ? 'lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+                                ? 'lg:text-primary dark:text-white lg:group-hover:text-primary dark:text-whitee lg:group-hover:opacity-70 xl:ml-10'
                                 : 'lg:text-body-color dark:lg:text-dark-6 xl:ml-10'
                             }`}
                           >
@@ -152,7 +152,7 @@ const menuitems = [
                             item.children ? 'items-center justify-between' : ''
                           } ${item.children ? 'lg:ml-8 lg:pl-0 lg:pr-4' : 'lg:ml-7 lg:px-0'} lg:inline-flex lg:py-6 ${
                             Astro.url.pathname === '/'
-                              ? 'lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
+                              ? 'lg:text-primary dark:text-white lg:group-hover:text-primary dark:text-white lg:group-hover:opacity-70 xl:ml-10'
                               : 'lg:text-body-color dark:lg:text-dark-6 xl:ml-10'
                           }`}
                         >
@@ -172,7 +172,7 @@ const menuitems = [
             id="themeSwitcher"
           >
             <span
-              class={`hidden dark:block ${Astro.url.pathname === '/' ? 'text-white' : 'text-dark dark:text-white'}`}
+              class={`block dark:hidden ${Astro.url.pathname === '/' ? 'text-primary' : 'text-dark '}`}
             >
               <svg
                 class="fill-current"
@@ -188,7 +188,7 @@ const menuitems = [
               </svg>
             </span>
             <span
-              class={`block dark:hidden ${Astro.url.pathname === '/' ? 'text-white' : 'text-dark dark:text-white'}`}
+              class={`hidden dark:block text-white`}
             >
               <svg
                 class="fill-current"

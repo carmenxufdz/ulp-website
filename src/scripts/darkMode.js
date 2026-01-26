@@ -10,19 +10,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const isDarkMode = document.documentElement.classList.contains('dark');
     const isSticky = document.body.classList.contains('sticky-active');
 
-    if (isHomePage && !isSticky) {
-      darkLogo.classList.remove('hidden');
-      lightLogo.classList.add('hidden');
-
-    } else {
-      if (isDarkMode) {
-        darkLogo.classList.remove('hidden');
-        lightLogo.classList.add('hidden');
+    if(isHomePage){
+      const darkPatrocinadores = document.getElementById('patrocinadores-modo-oscuro');
+      const lightPatrocinadores = document.getElementById('patrocinadores-modo-claro');
+      if(isDarkMode){
+        darkPatrocinadores.classList.remove('hidden');
+        lightPatrocinadores.classList.add('hidden');
       } else {
-        darkLogo.classList.add('hidden');
-        lightLogo.classList.remove('hidden');
+        darkPatrocinadores.classList.add('hidden');
+        lightPatrocinadores.classList.remove('hidden');
       }
     }
+    if (isDarkMode) {
+      darkLogo.classList.remove('hidden');
+      lightLogo.classList.add('hidden');
+    } else {
+      darkLogo.classList.add('hidden');
+      lightLogo.classList.remove('hidden');
+    }
+    
   };
 
   const themeCheck = () => {

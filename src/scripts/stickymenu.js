@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (isHomePage) {
         if (document.documentElement.classList.contains('dark')) {
-          imgModoOscuro.classList.remove('hidden');
-          imgModoClaro.classList.add('hidden');
+          imgModoOscuro.classList.add('hidden');
+          imgModoClaro.classList.remove('hidden');
         } else {
           imgModoOscuro.classList.add('hidden');
           imgModoClaro.classList.remove('hidden');
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.classList.remove('sticky-active');
 
       if (isHomePage) {
-        imgModoOscuro.classList.remove('hidden');
-        imgModoClaro.classList.add('hidden');
+        imgModoOscuro.classList.add('hidden');
+        imgModoClaro.classList.remove('hidden');
       } else {
         if (document.documentElement.classList.contains('dark')) {
           imgModoOscuro.classList.remove('hidden');
