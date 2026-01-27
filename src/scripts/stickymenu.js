@@ -11,14 +11,59 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', function () {
     if (window.scrollY > ud_header.offsetTop) {
       ud_header.classList.add('sticky-header');
-      ud_header.classList.remove('absolute', 'bg-transparent', 'z-40');
+      ud_header.classList.remove(
+        'absolute',
+        'bg-gradient-to-bl',
+        'from-[#01576C]/80',
+        'from-30%',
+        'via-[#012C5F]/85',
+        'via-70%',
+        'to-[#012C5F]/95',
+        'dark:bg-none',
+        'bg-transparent',
+        'z-40'
+      );
+
       document.body.classList.add('sticky-active');
 
+      if (isHomePage) {
+        if (document.documentElement.classList.contains('dark')) {
+          imgModoOscuro.classList.remove('hidden');
+          imgModoClaro.classList.add('hidden');
+        } else {
+          imgModoOscuro.classList.add('hidden');
+          imgModoClaro.classList.remove('hidden');
+        }
+      }
     } else {
       ud_header.classList.remove('sticky-header');
-      ud_header.classList.add('absolute', 'bg-transparent', 'z-40');
+      ud_header.classList.add(
+        'absolute',
+        'bg-gradient-to-bl',
+        'from-[#01576C]/80',
+        'from-30%',
+        'via-[#012C5F]/85',
+        'via-70%',
+        'to-[#012C5F]/95',
+        'dark:bg-none',
+        'bg-transparent',
+        'z-40'
+      );
+
       document.body.classList.remove('sticky-active');
 
+      if (isHomePage) {
+        imgModoOscuro.classList.remove('hidden');
+        imgModoClaro.classList.add('hidden');
+      } else {
+        if (document.documentElement.classList.contains('dark')) {
+          imgModoOscuro.classList.remove('hidden');
+          imgModoClaro.classList.add('hidden');
+        } else {
+          imgModoOscuro.classList.add('hidden');
+          imgModoClaro.classList.remove('hidden');
+        }
+      }
     }
 
     if (backToTop) {

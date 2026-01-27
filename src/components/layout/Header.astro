@@ -36,7 +36,7 @@ const menuitems = [
 ---
 
 <header
-  class="ud-header absolute top-0 left-0 z-40 flex w-full items-center bg-transparent"
+  class="ud-header absolute top-0 left-0 z-40 flex w-full items-center bg-gradient-to-bl from-[#01576C]/80 from-30% via-[#012C5F]/85 via-70% to-[#012C5F]/95 dark:bg-none bg-transparent"
 >
   <div class="container">
     <div class="relative -mx-4 flex items-center justify-between">
@@ -101,7 +101,7 @@ const menuitems = [
                                 : 'lg:ml-7 lg:px-0'
                             } lg:inline-flex lg:py-6 ${
                               Astro.url.pathname === '/'
-                                ? 'lg:text-primary dark:text-white lg:group-hover:text-primary dark:text-whitee lg:group-hover:opacity-70 xl:ml-10'
+                                ? 'lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
                                 : 'lg:text-body-color dark:lg:text-dark-6 xl:ml-10'
                             }`}
                           >
@@ -152,7 +152,7 @@ const menuitems = [
                             item.children ? 'items-center justify-between' : ''
                           } ${item.children ? 'lg:ml-8 lg:pl-0 lg:pr-4' : 'lg:ml-7 lg:px-0'} lg:inline-flex lg:py-6 ${
                             Astro.url.pathname === '/'
-                              ? 'lg:text-primary dark:text-white lg:group-hover:text-primary dark:text-white lg:group-hover:opacity-70 xl:ml-10'
+                              ? 'lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10'
                               : 'lg:text-body-color dark:lg:text-dark-6 xl:ml-10'
                           }`}
                         >
@@ -172,7 +172,7 @@ const menuitems = [
             id="themeSwitcher"
           >
             <span
-              class={`block dark:hidden ${Astro.url.pathname === '/' ? 'text-primary' : 'text-dark '}`}
+              class={`block dark:hidden ${Astro.url.pathname === '/' ? 'text-white' : 'text-dark '}`}
             >
               <svg
                 class="fill-current"
